@@ -1,7 +1,16 @@
 #brand {
-	font-family: 'Indie Flower', cursive; 
+	font-family: 'Pacifico', cursive;
 	font-size: 200%;
-	margin-top: 1vh;
+	text-shadow: 2px 2px black;
+}
+
+#home {
+	padding-top: 150px;
+}
+
+#addItemButton {
+	cursor: pointer; 
+	min-width: 100px;
 }
 
 .navbar-items{
