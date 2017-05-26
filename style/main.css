@@ -20,11 +20,6 @@
 	margin-left: 1vh;
 }
 
-.navbar-items:hover {
-  border-color: #66afe9;
-  box-shadow: 0 0 8px rgba(0,255,0, 0.6);
-}
-
 .navbar-items img{
 	margin-top: 1vh;
 	height: 50px;

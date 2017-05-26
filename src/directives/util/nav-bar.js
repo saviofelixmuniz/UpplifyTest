@@ -3,8 +3,12 @@ angular.module('upplify')
 	return {
 		restrict: 'AE',
 		templateUrl: '/templates/directives/util/nav-bar.html',
-		controller: function ($scope) {
+		controller: function ($scope, SharedOrder) {
+			var setOrderBadge = function (order) {
+				$scope.orderBadge = order.length;
+			}
 
+			SharedOrder.setNavBarCallback(setOrderBadge);
 		}
 	}
 })

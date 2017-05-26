@@ -1,5 +1,9 @@
 <div id="home" ng-init="loadData()">
-	<div ng-repeat="item in foods" class="container">
+	<div class="input-group col-xs-offset-3 col-xs-6" style="margin-bottom: 10px; margin-top: -20px">
+	  <span class="input-group-addon glyphicon glyphicon-cutlery"></span>
+	  <input class="form-control" placeholder="search catalogue" ng-model="searchTerm">
+	</div>
+	<div ng-repeat="item in foods | filter : filterType | filter : searchTerm" class="container">
 		<div class="row">
 			<h4 class="col-xs-4">{{item.title}}</h4>
 		</div>

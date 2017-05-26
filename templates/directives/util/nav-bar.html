@@ -15,23 +15,23 @@
 
     <div class="collapse navbar-collapse" style="margin: 10px">
       <ul class="nav navbar-nav">
-          <li class="col-xs-2 navbar-items">
+          <li class="col-xs-2 navbar-items" ng-click="currentType = 'all'">
             <img src="/resources/img/all.png" /> 
             <p>All</p>
           </li>
-          <li class="col-xs-2 navbar-items">
+          <li class="col-xs-2 navbar-items" ng-click="currentType = 'burgers'">
             <img src="/resources/img/burguer.png"> 
-            <p>Burguer</p>
+            <p>Burger</p>
           </li>
-          <li class="col-xs-2 navbar-items">
+          <li class="col-xs-2 navbar-items" ng-click="currentType = 'salad'">
             <img style="margin-left: -1vh" src="/resources/img/salad.png"> 
             <p style="margin-left: 1vh">Salad</p>
           </li>
-          <li class="col-xs-2 navbar-items">
+          <li class="col-xs-2 navbar-items" ng-click="currentType = 'chinese'">
             <img src="/resources/img/ramen.png"> 
             <p>Chinese</p>
           </li>
-          <li class="col-xs-2 navbar-items">
+          <li class="col-xs-2 navbar-items" ng-click="currentType = 'pizza'">
             <img src="/resources/img/pizza.png"> 
             <p>Pizza</p>
           </li>
@@ -41,7 +41,7 @@
               <img style="min-height: 50px; width: auto" src="/resources/img/cart.png">
               <div class="row">
                 <p class="col-xs-2">Checkout</p>
-                <span class="badge  col-xs-offset-6">5</span>
+                <span class="badge  col-xs-offset-6">{{orderBadge}}</span>
               </div>
           </li>
       </ul>
