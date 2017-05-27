@@ -7,7 +7,6 @@ angular.module('upplify')
 	$scope.loadData = function() {
 		DataLoad.getAllFood().then(function(food) {
 			$scope.foods = food;
-			console.log($scope.foods);
 		});
 	}
 
@@ -23,12 +22,4 @@ angular.module('upplify')
 		else 
 			return false;
 	}
-
-	$rootScope.$watch('currentType', function(newValue) {
-		console.log(newValue);
-	});
-
-	$scope.$watch('searchTerm', function (newValue) {
-		console.log(newValue);
-	});
 });

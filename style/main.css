@@ -13,6 +13,21 @@
 	min-width: 100px;
 }
 
+.active {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    -moz-filter:    grayscale(0%);
+    -ms-filter:     grayscale(0%);
+    -o-filter:      grayscale(0%);
+}
+
+.not-active {
+    filter: none;
+    -webkit-filter: grayscale(100%);
+    -moz-filter:    grayscale(100%);
+    -ms-filter:     grayscale(100%);
+    -o-filter:      grayscale(100%);
+}
 .navbar-items{
 	cursor: pointer; 
 	text-align: center;
