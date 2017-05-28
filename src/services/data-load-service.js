@@ -1,3 +1,5 @@
+//Service responsible for loading data from file, it returns a promise for assync porposes. 
+
 angular.module('upplify')
 .service('DataLoad', function ($http) {
 

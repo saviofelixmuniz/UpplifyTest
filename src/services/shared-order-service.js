@@ -1,3 +1,4 @@
+//Service that will hold the costumer's order info. It's important so all components may have access to it.
 angular.module('upplify')
 .service('SharedOrder', function () {
 
@@ -18,13 +19,18 @@ angular.module('upplify')
 	}
 
 	this.getOrder = function () {
-		return this.order;
+		return order;
+	}
+
+	this.updateOrder = function(newOrder) {
+		order = newOrder;
 	}
 
 	this.setNavBarCallback = function(callback) {
 		this.navBarCallback = callback;
 	}
 
+	//This will make it possible for other components to run the nav bar callback and updating the number of items' badge, it's important because holds the responsibility for its expert. 
 	this.runNavBarCallback = function() {
 		this.navBarCallback(order);
 	}

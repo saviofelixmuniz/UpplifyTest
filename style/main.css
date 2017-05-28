@@ -32,15 +32,21 @@
 	cursor: pointer; 
 	text-align: center;
 	margin: 0 auto;
-	margin-left: 4vh;
+	margin-left: 2vh;
 }
 
 .navbar-items img{
 	margin-top: 1vh;
-	height: 50px;
+	height: 5vh;
+	max-height: 50px;
 	display: block;
 }
 
 .navbar-items p {
  	color: white;
+}
+
+.thumbnail {
+	height: 80px;
+	max-width: 120px; 
 }

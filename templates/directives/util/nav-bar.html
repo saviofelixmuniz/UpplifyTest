@@ -15,33 +15,13 @@
 
     <div class="collapse navbar-collapse" style="margin: 10px">
       <ul class="nav navbar-nav">
-          <li class="col-xs-1 navbar-items" ng-click="currentType = 'all'" ng-class=isActive('all')>
-            <img src="/resources/img/all.png" /> 
-            <p>All</p>
-          </li>
-          <li class="col-xs-1 navbar-items" ng-click="currentType = 'burgers'" ng-class=isActive('burgers')>
-            <img src="/resources/img/burguer.png"> 
-            <p>Burger</p>
-          </li>
-          <li class="col-xs-1 navbar-items" ng-click="currentType = 'salad'" ng-class=isActive('salad')>
-            <img style="margin-left: -1vh" src="/resources/img/salad.png"> 
-            <p style="margin-left: 1vh">Salad</p>
-          </li>
-          <li class="col-xs-1 navbar-items" ng-click="currentType = 'chinese'" ng-class=isActive('chinese')>
-            <img src="/resources/img/ramen.png"> 
-            <p>Chinese</p>
-          </li>
-          <li class="col-xs-1 navbar-items" ng-click="currentType = 'pizza'" ng-class=isActive('pizza')>
-            <img src="/resources/img/pizza.png"> 
-            <p>Pizza</p>
-          </li>
-          <li class="col-xs-1 navbar-items" ng-click="currentType = 'beverage'" ng-class=isActive('beverage')>
-            <img src="/resources/img/drink.png"> 
-            <p>Drinks</p>
+          <li ng-repeat="foodType in iconLayouts" class="col-xs-1 navbar-items" ng-click="setCurrent(foodType.id)" ng-class=isActive(foodType.id)>
+            <img style="{{foodType.imgStyle}}" ng-src="{{foodType.image}}" /> 
+            <p style="{{foodType.pStyle}}">{{foodType.name}}</p>
           </li>
       </ul>
       <ul class="nav navbar-nav navbar-right" style="margin-right: 30px;">
-          <li class="navbar-items">
+          <li class="navbar-items" ng-click="checkout()">
               <img style="min-height: 50px; width: auto" src="/resources/img/cart.png">
               <div class="row">
                 <p class="col-xs-2">Checkout</p>
